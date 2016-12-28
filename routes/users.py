@@ -2,7 +2,7 @@ from flask import Blueprint, g, request, render_template, url_for, redirect, ses
 
 from data import user, team
 
-from utils import decorators, ratelimit, captcha
+from utils import decorators, ratelimit
 import config
 import exceptions
 
@@ -40,12 +40,6 @@ def register():
     if request.method == "GET":
         return render_template("register.html")
     elif request.method == "POST":
-        try:
-            captcha.verify_captcha()
-        except exceptions.CaptchaError as e:
-            flash(str(e))
-            return redirect(url_for(".register"))
-
         username = request.form["username"].strip()
         user_email = request.form["email"].strip()
         password = request.form["password"].strip()

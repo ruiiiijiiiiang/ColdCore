@@ -174,7 +174,7 @@ def recache_solves(args):
     print(r.hvals("solves"))
 
 def main():
-    parser = argparse.ArgumentParser(description="{} problem manager".format(config.ctf_name))
+    parser = argparse.ArgumentParser(description="{} problem manager".format(config.site_name))
     debug_level = parser.add_mutually_exclusive_group()
     debug_level.add_argument('-v', '--verbose', help="Print intermediate results", action="store_true")
     debug_level.add_argument('-s', '--silent', help="Print out very little", action="store_true")

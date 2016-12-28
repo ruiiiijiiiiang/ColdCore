@@ -118,13 +118,13 @@
 </div>
 <div id="firstlogin" class="modal">
     <div class="modal-content">
-        <h4>Welcome to {{ config.ctf_name }}!</h4>
-        <p>Hi, {{ user.username }}! Welcome to {{ config.ctf_name }}, {{ config.tagline }}.</p>
+        <h4>Welcome to {{ config.site_name }}!</h4>
+        <p>Hi, {{ user.username }}! Welcome to {{ config.site_name }}, {{ config.tagline }}.</p>
 
         <p>First off, please check the email you signed up with. You must confirm your account to solve problems. If needed, you can change your Email or resend confirmation on this page.</p>
 
 
-        <p>The competition has started, but we recommend you read the <a href="https://icec.tf/about">Rules</a> and <a href="https://icec.tf/faq">FAQ</a> before you start. Join the Chat to meet your fellow competitors and ask questions.</p>
+        <p>The competition has started, but we recommend you read the <a href="https://c0re.training/about">Rules</a> and <a href="https://c0re.training/faq">FAQ</a> before you start. Join the Chat to meet your fellow competitors and ask questions.</p>
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
@@ -136,6 +136,7 @@
 <script>$("#firstlogin").openModal();</script>
 {% endif %}
 <script>
+/*
 $(function(){
   $("#country").change(function(e) {
     if($("#country").val() == "ISL"){
@@ -149,5 +150,6 @@ $(function(){
     }
   });
 });
+*/
 </script>
 {% endblock %}

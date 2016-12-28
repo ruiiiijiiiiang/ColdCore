@@ -11,7 +11,7 @@ def generate_random_string(length=32, chars=allowed_chars):
 
 
 def generate_team_key():
-    return config.ctf_name.lower() + "_" + generate_random_string(32, allowed_chars)
+    return config.site_name.lower() + "_" + generate_random_string(32, allowed_chars)
 
 
 def generate_confirmation_key():

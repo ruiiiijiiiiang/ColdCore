@@ -4,7 +4,8 @@ from datetime import datetime
 production = os.getenv("PRODUCTION", None) is not None
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-ctf_name = "IceCTF"
+site_name = "C0RE"
+domain_name = "c0re.training"
 eligibility = "In order to be eligible for prizes, all members of your team must be Icelandic residents, and you must not have more than three team members."
 tagline = "The Icelandic Hacking Competition"
 # IRC Channel
@@ -23,7 +24,7 @@ proxied_ip_header = "X-Forwarded-For"
 teams_on_graph = 10
 
 # Which email to send out notifications from
-mail_from = "notice@icec.tf"
+mail_from = "notice@c0re.training"
 
 # Wether to render the scoreboard on request or cache
 immediate_scoreboard = False
@@ -40,8 +41,8 @@ custom_stylesheet = "css/main.css"
 
 enable_shell = True
 
-shell_port = 22
-shell_host = "shell.icec.tf"
+shell_port = 4200
+shell_host = "104.196.30.157"
 
 shell_user_prefixes = ["ctf-"]
 shell_password_length = 8

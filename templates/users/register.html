@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Register{% endblock %}
 {% block head %}
-<script src='https://www.google.com/recaptcha/api.js'></script>
 {% endblock %}
 {% block content %}
 
@@ -93,9 +92,6 @@
         </div>
         <div class="row no-bot">
             <div class="col s12 m6">
-                <div class="g-recaptcha" data-sitekey="{{ config.secret.recaptcha_key }}"></div>
-            </div>
-            <div class="col s12 m6">
                 <button class="btn waves-effect waves-light right register-submit" type="submit">Submit</button>
             </div>
         </div>
@@ -119,6 +115,7 @@ $(function(){
     $("#join_team-input").val("1");
   });
 
+/*
   $("#country").change(function(e) {
     if($("#country").val() == "ISL"){
       $("#prize-info").show("slow");
@@ -130,6 +127,7 @@ $(function(){
       $("#male").prop('required', false);
     }
   });
+*/
 
 });
 </script>
